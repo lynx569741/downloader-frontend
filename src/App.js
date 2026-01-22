@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = window.location.origin;
+const API = "https://scenic-realm-exchange-intl.trycloudflare.com";
 
 export default function App() {
   const [page, setPage] = useState("jeux");
@@ -95,9 +95,7 @@ export default function App() {
               <div className="loaderText">Chargement...</div>
             </div>
           ) : filtered.length === 0 ? (
-            <div className="empty">
-              Aucun résultat
-            </div>
+            <div className="empty">Aucun résultat</div>
           ) : (
             filtered.map((name, i) => (
               <div
